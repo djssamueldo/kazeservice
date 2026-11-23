@@ -1,4 +1,4 @@
-# KazeService
+# KazeServices
 
 **Plateforme web de services immobiliers et professionnels**
 
