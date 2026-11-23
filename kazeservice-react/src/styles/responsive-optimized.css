@@ -1,0 +1,750 @@
+/* ==========================================================
+   KAZESERVICE — Responsive Optimisé
+   Correction des problèmes responsive pour tous les appareils
+   ========================================================== */
+
+/* Variables responsive supplémentaires */
+:root {
+  --padding-mobile: clamp(16px, 4vw, 20px);
+  --padding-tablet: clamp(20px, 3vw, 24px);
+  --padding-desktop: clamp(24px, 2.5vw, 32px);
+  --padding-large: clamp(32px, 2vw, 48px);
+
+  --container-padding: clamp(16px, 4vw, 48px);
+  --gap-mobile: clamp(12px, 2vw, 16px);
+  --gap-tablet: clamp(16px, 2vw, 24px);
+  --gap-desktop: clamp(24px, 2vw, 32px);
+}
+
+/* Conteneurs - Padding adaptatif */
+.container {
+  padding: 0 var(--container-padding);
+}
+
+/* Sections - Espacements adaptatifs */
+.section {
+  padding: clamp(48px, 8vw, 80px) 0;
+}
+
+/* Header - Hauteur adaptative */
+header.site {
+  height: clamp(56px, 8vw, 64px);
+}
+
+/* Logo - Hauteur adaptative */
+.logo-img {
+  height: clamp(32px, 5vw, 40px);
+  width: auto;
+  max-width: 100%;
+}
+
+/* Boutons - Hauteur tactile minimum */
+.btn, .btn-primary, .btn-secondary, .btn-trio {
+  min-height: clamp(44px, 6vw, 48px);
+  padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.btn-appointment {
+  min-height: 36px;
+  height: 40px;
+  width: auto;
+  min-width: clamp(90px, 20vw, 110px);
+  max-width: 110px;
+  padding: 0 clamp(8px, 2vw, 12px);
+  font-size: clamp(11px, 2vw, 13px);
+  white-space: normal;
+}
+
+/* Account Avatar - Taille adaptative */
+.account-avatar {
+  width: clamp(36px, 5vw, 40px);
+  height: clamp(36px, 5vw, 40px);
+}
+
+.account-avatar svg {
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+}
+
+/* Burger Menu - Taille adaptative */
+.burger {
+  width: clamp(32px, 5vw, 34px);
+  height: clamp(32px, 5vw, 34px);
+}
+
+.burger span {
+  width: clamp(20px, 3vw, 24px);
+  height: 2px;
+}
+
+/* Mobile Menu - Largeur adaptative */
+.mobile-menu {
+  width: clamp(280px, 80vw, 320px);
+  right: clamp(-320px, -80vw, -320px);
+}
+
+/* Dropdown - Largeur adaptative */
+.dropdown-menu {
+  min-width: clamp(180px, 20vw, 200px);
+}
+
+/* Hero - Hauteur adaptative uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .hero-split {
+    min-height: clamp(400px, 60vh, 500px);
+    height: auto;
+  }
+}
+
+/* Hero Logo - Taille adaptative uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .hero-right .logo-img {
+    height: clamp(140px, 30vw, 200px);
+    max-width: 100%;
+  }
+}
+
+/* Hero Slogan - Largeur adaptative uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .hero-right .hero-slogan {
+    max-width: 100%;
+  }
+}
+
+/* Hero Values - Largeur adaptative uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .hero-right .hero-values {
+    max-width: 100%;
+  }
+}
+
+/* Trio Band - Hauteur adaptative uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .trio-col {
+    min-height: clamp(280px, 50vw, 380px);
+  }
+}
+
+/* Service Card Icon - Taille adaptative */
+.service-card .ic {
+  width: clamp(40px, 6vw, 52px);
+  height: clamp(40px, 6vw, 52px);
+}
+
+/* Mission Card Icon - Taille adaptative */
+.mission-card .ic {
+  width: clamp(36px, 5vw, 44px);
+  height: clamp(36px, 5vw, 44px);
+}
+
+/* WhatsApp Float - Taille adaptative */
+.whatsapp-float {
+  width: clamp(48px, 7vw, 58px);
+  height: clamp(48px, 7vw, 58px);
+  bottom: clamp(16px, 3vw, 22px);
+  right: clamp(16px, 3vw, 22px);
+}
+
+.whatsapp-float svg {
+  width: clamp(24px, 4vw, 30px);
+  height: clamp(24px, 4vw, 30px);
+}
+
+/* Modal - Largeur adaptative */
+.modal-content {
+  max-width: clamp(90vw, 600px, 600px);
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.modal-close {
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+}
+
+/* Agencies Hero - Hauteur adaptative */
+.agencies-hero {
+  min-height: clamp(400px, 60vh, 500px);
+  height: auto;
+}
+
+.agencies-hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Agency Icon - Taille adaptative */
+.agency-icon {
+  width: clamp(32px, 5vw, 36px);
+  height: clamp(32px, 5vw, 36px);
+}
+
+.agency-icon svg {
+  width: clamp(16px, 3vw, 18px);
+  height: clamp(16px, 3vw, 18px);
+}
+
+/* Agency Map - Hauteur adaptative */
+.agency-map-container iframe {
+  height: clamp(180px, 30vw, 220px);
+}
+
+/* Card Icon - Taille adaptative */
+.card-icon, .advantage-icon {
+  width: clamp(36px, 5vw, 48px);
+  height: clamp(36px, 5vw, 48px);
+}
+
+/* Author Avatar - Taille adaptative */
+.author-avatar {
+  width: clamp(40px, 6vw, 48px);
+  height: clamp(40px, 6vw, 48px);
+}
+
+/* Internal Hero - Hauteur adaptative */
+.internal-hero {
+  height: auto;
+  min-height: clamp(350px, 60vh, 420px);
+  max-height: none;
+}
+
+/* Unified Heroes - Hauteur adaptative */
+.buy-hero, .rent-hero, .sell-hero, .manage-hero, .invest-hero,
+.placement-hero, .it-services-hero, .services-hero-custom,
+.partners-hero, .properties-hero {
+  height: auto;
+  min-height: clamp(400px, 60vh, 500px);
+  max-height: none;
+}
+
+/* Hero Titles - Taille adaptative */
+.buy-hero-title, .rent-hero-title, .sell-hero-title, .manage-hero-title,
+.invest-hero-title, .placement-hero-title, .it-services-hero-title,
+.services-hero-title, .partners-hero-title, .properties-hero-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+/* Properties Grid - Colonnes adaptatives */
+.properties-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .properties-grid {
+    gap: var(--gap-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .properties-grid {
+    gap: var(--gap-desktop);
+  }
+}
+
+/* List View - Adaptation mobile */
+.properties-grid.list-view .property-card .thumb {
+  width: clamp(150px, 30vw, 220px);
+}
+
+/* Services Grid - Colonnes adaptatives */
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    gap: var(--gap-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    gap: var(--gap-desktop);
+  }
+}
+
+/* Why Us Cards Grid - Colonnes adaptatives */
+.why-us-cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .why-us-cards-grid {
+    gap: var(--gap-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-us-cards-grid {
+    gap: var(--gap-desktop);
+  }
+}
+
+/* Search Form - Adaptation mobile */
+.search-row {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .search-row {
+    gap: var(--gap-tablet);
+  }
+}
+
+/* About Badges Grid - Colonnes adaptatives */
+.about-badges-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+/* Process Steps Grid - Colonnes adaptatives */
+.process-steps-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+/* Tech Grid - Colonnes adaptatives */
+.tech-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+/* Testimonials Grid - Colonnes adaptatives */
+.testi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+/* Feature Grid - Adaptation mobile */
+.feature-grid, .feature-grid.reverse {
+  grid-template-columns: 1fr;
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .feature-grid, .feature-grid.reverse {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-tablet);
+  }
+}
+
+/* About Grid - Adaptation mobile */
+.about-grid, .mission-grid, .ruban-band, .ruban-band.reverse {
+  grid-template-columns: 1fr;
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .about-grid, .mission-grid, .ruban-band, .ruban-band.reverse {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-tablet);
+  }
+}
+
+/* Trio Band - Adaptation uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .trio-band {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* Field Row - Adaptation mobile */
+.field-row {
+  grid-template-columns: 1fr;
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .field-row {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: var(--gap-tablet);
+  }
+}
+
+/* Tiles Grid - Colonnes adaptatives */
+.tiles-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+/* Services Shelf - Colonnes adaptatives */
+.services-shelf {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--gap-mobile);
+}
+
+/* Form Fields - Adaptation mobile */
+.field input, .field select, .field textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Images - Toujours proportionnelles */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Hero Images - Adaptation uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .hero-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Hero Split - Adaptation uniquement sur mobile/tablette */
+@media (max-width: 1023px) {
+  .hero-split .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-mobile);
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+}
+
+/* Scroll Indicator - Taille adaptative */
+.scroll-indicator {
+  width: clamp(40px, 6vw, 48px);
+  height: clamp(40px, 6vw, 48px);
+  bottom: clamp(16px, 3vw, 30px);
+}
+
+.scroll-indicator svg {
+  width: clamp(20px, 3vw, 24px);
+  height: clamp(20px, 3vw, 24px);
+}
+
+/* Hero Arrow - Taille adaptative */
+.hero-arrow {
+  width: clamp(44px, 6vw, 50px);
+  height: clamp(44px, 6vw, 50px);
+}
+
+.hero-arrow svg {
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+}
+
+/* Hero Indicator - Taille adaptative */
+.hero-indicator {
+  width: clamp(10px, 2vw, 12px);
+  height: clamp(10px, 2vw, 12px);
+}
+
+/* Hero Quickbar - Adaptation mobile */
+.hero-quickbar {
+  flex-direction: column;
+  gap: var(--gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .hero-quickbar {
+    flex-direction: row;
+    gap: var(--gap-tablet);
+  }
+}
+
+/* Hero Stats - Adaptation mobile */
+.hero-stats {
+  flex-wrap: wrap;
+  gap: var(--gap-mobile);
+}
+
+/* Hero Actions - Adaptation mobile */
+.hero-actions {
+  flex-wrap: wrap;
+  gap: var(--gap-mobile);
+}
+
+.hero-actions .btn {
+  flex: 1;
+  min-width: clamp(140px, 30vw, 180px);
+}
+
+/* Filters Bar - Adaptation mobile */
+.filters-bar {
+  flex-wrap: wrap;
+  gap: var(--gap-mobile);
+}
+
+.filters-bar input[type="text"] {
+  min-width: 0;
+  flex: 1;
+}
+
+/* Dashboard Header - Adaptation mobile */
+.dashboard-header {
+  flex-wrap: wrap;
+  gap: var(--gap-mobile);
+}
+
+.dashboard-header-right {
+  flex-wrap: wrap;
+  gap: var(--gap-mobile);
+}
+
+/* Dashboard Label - Adaptation mobile */
+.dashboard-label {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+/* Section Head - Largeur adaptative */
+.section-head {
+  max-width: 100%;
+}
+
+/* Eyebrow - Adaptation mobile */
+.eyebrow {
+  font-size: clamp(0.7rem, 1.5vw, 0.78rem);
+}
+
+.eyebrow::before {
+  width: clamp(16px, 3vw, 20px);
+}
+
+/* Hero Value Item - Adaptation mobile */
+.hero-value-item {
+  flex: 1;
+  min-width: clamp(140px, 30vw, 180px);
+}
+
+/* Hero Value Icon - Taille adaptative */
+.hero-value-icon {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+}
+
+/* Hero Value Content - Adaptation mobile */
+.hero-value-content {
+  flex: 1;
+}
+
+/* Hero Value Title - Taille adaptative */
+.hero-value-title {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+}
+
+/* Hero Value Subtitle - Taille adaptative */
+.hero-value-subtitle {
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+}
+
+/* Hero Card - Largeur adaptative */
+.hero-card {
+  max-width: 100%;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+/* Hero Card Title - Taille adaptative */
+.hero-card h3 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Hero Card Text - Taille adaptative */
+.hero-card p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* Hero Card Link - Taille adaptative */
+.hero-card a {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix for elements that might cause horizontal scroll */
+img, svg, canvas, video, iframe {
+  max-width: 100%;
+}
+
+/* Fix for tables */
+table {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Fix for pre/code blocks */
+pre, code {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Fix for long words */
+p, h1, h2, h3, h4, h5, h6, li, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fix for flex containers */
+.flex-container {
+  flex-wrap: wrap;
+}
+
+/* Fix for grid containers */
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+
+/* Very small devices (320px) */
+@media (max-width: 320px) {
+  :root {
+    --container-padding: 12px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .btn, .btn-primary, .btn-secondary, .btn-trio {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile (360px - 374px) */
+@media (min-width: 321px) and (max-width: 374px) {
+  :root {
+    --container-padding: 14px;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+}
+
+/* iPhone SE (375px) */
+@media (min-width: 375px) and (max-width: 389px) {
+  :root {
+    --container-padding: 16px;
+  }
+}
+
+/* Large mobile (390px - 413px) */
+@media (min-width: 390px) and (max-width: 413px) {
+  :root {
+    --container-padding: 18px;
+  }
+}
+
+/* Phablets (480px - 599px) */
+@media (min-width: 480px) and (max-width: 599px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Tablets portrait (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  :root {
+    --container-padding: 24px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --container-padding: 28px;
+  }
+
+  .container {
+    padding: 0 28px;
+  }
+}
+
+/* Small laptops (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root {
+    --container-padding: 32px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Laptops (1280px - 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  :root {
+    --container-padding: 36px;
+  }
+
+  .container {
+    padding: 0 36px;
+  }
+}
+
+/* Full HD (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  :root {
+    --container-padding: 40px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* 2K (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  :root {
+    --container-padding: 48px;
+  }
+
+  .container {
+    padding: 0 48px;
+  }
+}
+
+/* 4K (2560px - 3839px) */
+@media (min-width: 2560px) and (max-width: 3839px) {
+  :root {
+    --container-padding: 64px;
+  }
+
+  .container {
+    padding: 0 64px;
+  }
+}
+
+/* Very large screens (3840px+) */
+@media (min-width: 3840px) {
+  :root {
+    --container-padding: 80px;
+  }
+
+  .container {
+    padding: 0 80px;
+  }
+}

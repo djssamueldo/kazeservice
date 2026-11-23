@@ -1,0 +1,177 @@
+.property-characteristic-editor {
+  margin-bottom: 24px;
+}
+
+.property-characteristic-editor h4 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--encre);
+  font-weight: 600;
+}
+
+.characteristics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.characteristic-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.characteristic-field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--encre-douce);
+}
+
+.characteristic-field input[type="text"],
+.characteristic-field input[type="number"],
+.characteristic-field select {
+  padding: 8px 12px;
+  border: 1px solid var(--ligne);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.characteristic-field input:focus,
+.characteristic-field select:focus {
+  outline: none;
+  border-color: var(--brique);
+}
+
+.number-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.number-input input {
+  flex: 1;
+}
+
+.unit {
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+  white-space: nowrap;
+}
+
+.boolean-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--ligne);
+  border-radius: 6px;
+  background: var(--ivoire-carte);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  border-color: var(--brique);
+}
+
+.toggle-btn.active {
+  background: var(--brique);
+  color: white;
+  border-color: var(--brique);
+}
+
+.characteristic-field.custom {
+  grid-column: 1 / -1;
+  background: var(--ivoire-carte);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--ligne);
+}
+
+.custom-characteristic {
+  display: flex;
+  gap: 8px;
+}
+
+.custom-characteristic input {
+  flex: 1;
+}
+
+.remove-custom-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #dc2626;
+  transition: all 0.2s ease;
+}
+
+.remove-custom-btn:hover {
+  background: #fecaca;
+}
+
+.remove-custom-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.add-custom-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background: var(--ivoire-carte);
+  border: 1px dashed var(--ligne);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--encre);
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.add-custom-btn:hover {
+  border-color: var(--brique);
+  background: var(--ivoire-carte);
+}
+
+.custom-characteristic-form {
+  background: var(--ivoire-carte);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--ligne);
+  margin-top: 12px;
+}
+
+.custom-characteristic-form .field-row {
+  margin-bottom: 12px;
+}
+
+.custom-characteristic-form .field {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .characteristics-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .characteristic-field label {
+    font-size: 0.8rem;
+  }
+
+  .toggle-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,369 @@
+/* ==========================================================
+   HOME PAGE RESPONSIVE OPTIMIZATION
+   Optimisation responsive spécifique pour la page d'accueil
+   ========================================================== */
+
+/* Large Desktop (1920px+) */
+@media (min-width: 1600px){
+  .container{
+    max-width: 1440px;
+    padding: 0 48px;
+  }
+
+  /* Home Daily Section */
+  .home-daily-container{
+    max-width: 1440px;
+    padding: 140px 48px;
+  }
+  .home-daily-image-large{
+    max-width: 520px;
+  }
+  .home-daily-image-small{
+    width: 250px;
+    height: 340px;
+    left: 40px;
+  }
+
+  /* Home Support Section */
+  .home-support-container{
+    max-width: 1440px;
+    padding: 0 48px;
+  }
+
+  /* Home Contact Section */
+  .home-contact-section{
+    padding: 0;
+  }
+  .home-contact-container{
+    max-width: 1440px;
+    padding: 100px 48px;
+  }
+  .home-contact-section .home-contact-wrapper{
+    max-width: 700px;
+  }
+
+  /* Home Blog Section */
+  .home-blog-section{
+    padding: 0;
+  }
+  .home-blog-container{
+    max-width: 1440px;
+    padding: 100px 48px;
+  }
+}
+
+/* Desktop (1440px-1599px) */
+@media (max-width: 1440px){
+  .container{
+    max-width: 1200px;
+    padding: 0 32px;
+  }
+
+  /* Home Daily Section */
+  .home-daily-container{
+    max-width: 1280px;
+    padding: 100px 32px;
+  }
+  .home-daily-image-large{
+    max-width: 480px;
+    min-height: 600px;
+  }
+  .home-daily-image-small{
+    width: 220px;
+    height: 300px;
+  }
+
+  /* Home Support Section */
+  .home-support-container{
+    max-width: 1280px;
+    padding: 0 32px;
+  }
+
+  /* Home Contact Section */
+  .home-contact-section{
+    padding: 0;
+  }
+  .home-contact-container{
+    max-width: 1280px;
+    padding: 90px 32px;
+  }
+  .home-contact-section .home-contact-wrapper{
+    max-width: 650px;
+  }
+
+  /* Home Blog Section */
+  .home-blog-section{
+    padding: 0;
+  }
+  .home-blog-container{
+    max-width: 1280px;
+    padding: 90px 32px;
+  }
+}
+
+/* Small Desktop (1280px-1439px) */
+@media (max-width: 1280px){
+  .container{
+    max-width: 1100px;
+    padding: 0 28px;
+  }
+
+  /* Home Daily Section */
+  .home-daily-container{
+    max-width: 1200px;
+    padding: 90px 28px;
+  }
+  .home-daily-image-large{
+    max-width: 440px;
+    min-height: 560px;
+  }
+  .home-daily-image-small{
+    width: 200px;
+    height: 280px;
+  }
+
+  /* Home Support Section */
+  .home-support-container{
+    max-width: 1200px;
+    padding: 0 28px;
+  }
+
+  /* Home Contact Section */
+  .home-contact-section{
+    padding: 0;
+  }
+  .home-contact-container{
+    max-width: 1200px;
+    padding: 80px 28px;
+  }
+  .home-contact-section .home-contact-wrapper{
+    max-width: 600px;
+  }
+
+  /* Home Blog Section */
+  .home-blog-section{
+    padding: 0;
+  }
+  .home-blog-container{
+    max-width: 1200px;
+    padding: 80px 28px;
+  }
+}
+
+/* Tablet (768px-1279px) */
+@media (max-width: 1024px){
+  .container{
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  .section{
+    padding: 64px 0;
+  }
+  .section-head{
+    max-width: 100%;
+  }
+
+  /* Home Daily Section */
+  .home-daily-container{
+    max-width: 100%;
+    padding: 80px 24px;
+  }
+  .home-daily-wrapper{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .home-daily-image-large{
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  .home-daily-image-small{
+    display: none;
+  }
+  .home-daily-images{
+    min-height: auto;
+    transform: none;
+    opacity: 1;
+  }
+  .home-daily-content{
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Home Support Section */
+  .home-support-container{
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  .home-support-wrapper{
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .home-support-photo{
+    height: 400px;
+  }
+
+  /* Home Contact Section */
+  .home-contact-section{
+    padding: 0;
+  }
+  .home-contact-container{
+    max-width: 100%;
+    padding: 80px 24px;
+  }
+  .home-contact-section .home-contact-wrapper{
+    max-width: 580px;
+  }
+  .home-contact-section .home-contact-title{
+    font-size: 36px;
+  }
+
+  /* Home Blog Section */
+  .home-blog-section{
+    padding: 0;
+  }
+  .home-blog-container{
+    max-width: 100%;
+    padding: 80px 24px;
+  }
+  .home-blog-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (max 767px) */
+@media (max-width: 768px){
+  .container{
+    padding: 0 20px;
+  }
+  .section{
+    padding: 48px 0;
+  }
+  .section-head{
+    margin-bottom: 32px;
+  }
+
+  /* Home Daily Section */
+  .home-daily-container{
+    padding: 60px 20px;
+  }
+  .home-daily-title{
+    font-size: 36px;
+  }
+  .home-daily-image-large{
+    height: 350px;
+  }
+
+  /* Home Support Section */
+  .home-support-container{
+    padding: 0 20px;
+  }
+  .home-support-photo{
+    height: 300px;
+  }
+  .home-support-title{
+    font-size: 32px;
+  }
+
+  /* Home Contact Section */
+  .home-contact-section{
+    padding: 0;
+  }
+  .home-contact-container{
+    max-width: 100%;
+    padding: 60px 20px;
+  }
+  .home-contact-section .home-contact-wrapper{
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+  .home-contact-section .home-contact-title{
+    font-size: 28px;
+  }
+  .home-contact-section .home-contact-form-row{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .home-contact-section .home-contact-input{
+    width: 100%;
+  }
+  .home-contact-section .home-contact-btn{
+    width: 100%;
+  }
+
+  /* Home Blog Section */
+  .home-blog-section{
+    padding: 0;
+  }
+  .home-blog-container{
+    max-width: 100%;
+    padding: 60px 20px;
+  }
+  .home-blog-grid{
+    grid-template-columns: 1fr;
+  }
+  .home-blog-title{
+    font-size: 28px;
+  }
+
+  /* Properties Grid */
+  .properties-grid{
+    grid-template-columns: 1fr;
+  }
+
+  /* Trio Cards */
+  .trio-band{
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .trio-col{
+    border-right: none;
+    border-bottom: 1px solid var(--ligne);
+    min-height: auto;
+  }
+}
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px){
+  .container{
+    padding: 0 16px;
+  }
+  .section{
+    padding: 40px 0;
+  }
+
+  /* Home Daily Section */
+  .home-daily-title{
+    font-size: 28px;
+  }
+  .home-daily-image-large{
+    height: 280px;
+  }
+
+  /* Home Support Section */
+  .home-support-title{
+    font-size: 24px;
+  }
+
+  /* Home Contact Section */
+  .home-contact-section .home-contact-wrapper{
+    padding: 25px 16px;
+  }
+  .home-contact-section .home-contact-title{
+    font-size: 24px;
+  }
+  .home-contact-section .home-contact-btn{
+    height: 48px;
+    line-height: 48px;
+  }
+
+  /* Home Blog Section */
+  .home-blog-container{
+    padding: 50px 16px;
+  }
+  .home-blog-title{
+    font-size: 24px;
+  }
+}

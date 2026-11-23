@@ -1,0 +1,510 @@
+/* ==========================================================
+   MODALE PRENDRE RENDEZ-VOUS - Responsive Intelligent
+   ========================================================== */
+
+/* Desktop (≥ 1280px) - 45-50% de l'écran */
+@media (min-width: 1280px) {
+  .modal-content {
+    max-width: 50%;
+    min-width: 450px;
+  }
+}
+
+/* Tablettes larges (1024px - 1279px) - 60% de l'écran */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .modal-content {
+    max-width: 60%;
+    min-width: 400px;
+  }
+}
+
+/* Tablettes moyennes (768px - 1023px) - 70% de l'écran */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal-content {
+    max-width: 70%;
+    min-width: 350px;
+  }
+}
+
+/* Smartphones (< 768px) - 95% de l'écran */
+@media (max-width: 767px) {
+  .modal-content {
+    max-width: 95%;
+    min-width: 280px;
+    padding: 32px 24px;
+  }
+}
+
+/* Très petits smartphones (< 400px) */
+@media (max-width: 399px) {
+  .modal-content {
+    max-width: 98%;
+    min-width: 260px;
+    padding: 24px 16px;
+  }
+}
+
+/* ==========================================================
+   KAZESERVICE — Responsive Intelligent pour Sections Image + Contenu
+   Approche adaptative basée sur l'espace disponible
+   ========================================================== */
+
+/* Variables pour le responsive intelligent */
+:root {
+  --image-ratio-desktop: 1.2;
+  --image-ratio-tablet-large: 1.1;
+  --image-ratio-tablet-medium: 1.0;
+  --image-ratio-mobile: 0.8;
+
+  --text-ratio-desktop: 1.0;
+  --text-ratio-tablet-large: 1.1;
+  --text-ratio-tablet-medium: 1.2;
+  --text-ratio-mobile: 1.0;
+
+  --gap-desktop: clamp(48px, 4vw, 64px);
+  --gap-tablet-large: clamp(32px, 3vw, 48px);
+  --gap-tablet-medium: clamp(24px, 3vw, 32px);
+  --gap-mobile: clamp(16px, 4vw, 24px);
+}
+
+/* ==========================================================
+   FEATURE GRID (Sections Image + Texte alternées)
+   ========================================================== */
+
+/* Desktop (≥ 1280px) - Aucune modification */
+@media (min-width: 1280px) {
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+
+  .feature-photo {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* Tablettes larges (1024px - 1279px) - Réduction progressive des images */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .feature-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--gap-tablet-large);
+  }
+
+  .feature-photo {
+    aspect-ratio: 3.5/3;
+  }
+
+  .feature-text {
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+  }
+}
+
+/* Tablettes moyennes (768px - 1023px) - Adaptation progressive */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .feature-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: var(--gap-tablet-medium);
+  }
+
+  .feature-photo {
+    aspect-ratio: 3/3;
+  }
+
+  .feature-text {
+    font-size: clamp(0.9rem, 1.6vw, 0.95rem);
+  }
+
+  .feature-text h2 {
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+  }
+}
+
+/* Smartphones (< 768px) - Carte verticale */
+@media (max-width: 767px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-mobile);
+  }
+
+  .feature-grid.reverse .feature-text {
+    order: 1;
+  }
+
+  .feature-grid.reverse .feature-photo {
+    order: 2;
+  }
+
+  .feature-photo {
+    aspect-ratio: 16/9;
+    max-height: 300px;
+  }
+
+  .feature-text {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  .feature-text h2 {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+  }
+}
+
+/* ==========================================================
+   ABOUT GRID (Section Qui sommes-nous)
+   ========================================================== */
+
+/* Desktop (≥ 1280px) - Aucune modification */
+@media (min-width: 1280px) {
+  .about-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+  }
+}
+
+/* Tablettes larges (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .about-grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--gap-tablet-large);
+  }
+}
+
+/* Tablettes moyennes (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: var(--gap-tablet-medium);
+  }
+}
+
+/* Smartphones (< 768px) */
+@media (max-width: 767px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-mobile);
+  }
+}
+
+/* ==========================================================
+   MISSION GRID (Section Missions)
+   ========================================================== */
+
+/* Desktop (≥ 1280px) - Aucune modification */
+@media (min-width: 1280px) {
+  .mission-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Tablettes larges (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .mission-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2vw, 22px);
+  }
+}
+
+/* Tablettes moyennes (768px - 1023px) - Réduction à 2 colonnes */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-tablet-medium);
+  }
+}
+
+/* Smartphones (< 768px) - 1 colonne */
+@media (max-width: 767px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-mobile);
+  }
+}
+
+/* ==========================================================
+   RUBAN BAND (Bandes alternées de services)
+   ========================================================== */
+
+/* Desktop (≥ 1280px) - Aucune modification */
+@media (min-width: 1280px) {
+  .ruban-band {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .ruban-img {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* Tablettes larges (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ruban-band {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--gap-tablet-large);
+  }
+
+  .ruban-img {
+    aspect-ratio: 3.5/3;
+  }
+}
+
+/* Tablettes moyennes (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ruban-band {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: var(--gap-tablet-medium);
+  }
+
+  .ruban-img {
+    aspect-ratio: 3/3;
+  }
+
+  .ruban-text {
+    font-size: clamp(0.9rem, 1.6vw, 0.95rem);
+  }
+}
+
+/* Smartphones (< 768px) */
+@media (max-width: 767px) {
+  .ruban-band {
+    grid-template-columns: 1fr;
+    gap: var(--gap-mobile);
+  }
+
+  .ruban-band.reverse .ruban-img {
+    order: 1;
+  }
+
+  .ruban-band.reverse .ruban-text {
+    order: 2;
+  }
+
+  .ruban-img {
+    aspect-ratio: 16/9;
+    max-height: 300px;
+  }
+
+  .ruban-text {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  .ruban-text h3 {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+  }
+}
+
+/* ==========================================================
+   SECTIONS AVEC DEUX IMAGES SUPERPOSÉES
+   ========================================================== */
+
+/* Desktop (≥ 1280px) - Conserver la superposition */
+@media (min-width: 1280px) {
+  .double-image-container {
+    position: relative;
+  }
+
+  .double-image-primary,
+  .double-image-secondary {
+    position: absolute;
+  }
+}
+
+/* Tablettes larges (1024px - 1279px) - Évaluer la lisibilité */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .double-image-container {
+    position: relative;
+  }
+
+  .double-image-primary {
+    position: relative;
+    width: 100%;
+  }
+
+  .double-image-secondary {
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    width: 50%;
+    opacity: 0.9;
+  }
+}
+
+/* Tablettes moyennes (768px - 1023px) - Simplification */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .double-image-container {
+    position: relative;
+  }
+
+  .double-image-primary {
+    position: relative;
+    width: 100%;
+  }
+
+  .double-image-secondary {
+    display: none;
+  }
+}
+
+/* Smartphones (< 768px) - Une seule image */
+@media (max-width: 767px) {
+  .double-image-container {
+    position: relative;
+  }
+
+  .double-image-primary {
+    position: relative;
+    width: 100%;
+  }
+
+  .double-image-secondary {
+    display: none;
+  }
+}
+
+/* ==========================================================
+   PRIORITÉ AU TEXTE SUR LES IMAGES
+   ========================================================== */
+
+/* À toutes les tailles d'écran, le texte doit être prioritaire */
+.feature-text, .ruban-text, .about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-photo, .ruban-img, .about-img {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+/* Sur les écrans intermédiaires, réduire les images */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .feature-photo,
+  .ruban-img {
+    max-width: 90%;
+  }
+}
+
+/* Sur mobile, les images sont compactes */
+@media (max-width: 767px) {
+  .feature-photo,
+  .ruban-img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+/* ==========================================================
+   TYPOGRAPHIE ADAPTATIVE
+   ========================================================== */
+
+/* Titres fluides */
+.feature-text h2,
+.ruban-text h3,
+.about-text h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .feature-text h2,
+  .ruban-text h3,
+  .about-text h2 {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+  }
+}
+
+/* Paragraphes fluides */
+.feature-text p,
+.ruban-text p,
+.about-text p {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.65;
+  max-width: 65ch;
+}
+
+@media (max-width: 767px) {
+  .feature-text p,
+  .ruban-text p,
+  .about-text p {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================
+   ESPACEMENTS ADAPTATIFS
+   ========================================================== */
+
+/* Sections */
+.section {
+  padding: clamp(48px, 8vw, 80px) 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: clamp(32px, 10vw, 48px) 0;
+  }
+}
+
+/* Conteneurs */
+.container {
+  padding: 0 clamp(16px, 4vw, 48px);
+}
+
+/* ==========================================================
+   BOUTONS ADAPTATIFS
+   ========================================================== */
+
+.btn, .btn-primary, .btn-secondary, .btn-trio {
+  min-height: clamp(44px, 6vw, 48px);
+  padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  width: fit-content;
+}
+
+@media (max-width: 767px) {
+  .btn, .btn-primary, .btn-secondary, .btn-trio {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ==========================================================
+   PRÉVENTION DES DÉBORDEMENTS
+   ========================================================== */
+
+/* Empêcher le scroll horizontal */
+.feature-grid, .about-grid, .mission-grid, .ruban-band {
+  overflow: hidden;
+}
+
+/* Images */
+.feature-photo img, .ruban-img img, .about-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Texte */
+.feature-text, .ruban-text, .about-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ==========================================================
+   TRANSITIONS FLUIDES
+   ========================================================== */
+
+/* Transitions douces pour les changements de layout */
+.feature-grid, .about-grid, .mission-grid, .ruban-band {
+  transition: gap 0.3s ease;
+}
+
+.feature-photo, .ruban-img {
+  transition: aspect-ratio 0.3s ease;
+}
+
+.feature-text, .ruban-text, .about-text {
+  transition: font-size 0.3s ease;
+}

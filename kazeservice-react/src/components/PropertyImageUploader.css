@@ -1,0 +1,156 @@
+.property-image-uploader {
+  margin-bottom: 20px;
+}
+
+.image-upload-zone {
+  margin-bottom: 16px;
+}
+
+.upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border: 2px dashed var(--ligne);
+  border-radius: 8px;
+  background: var(--ivoire-carte);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-dropzone:hover,
+.upload-dropzone.active {
+  border-color: var(--brique);
+  background: var(--ivoire-carte);
+}
+
+.upload-dropzone svg {
+  width: 48px;
+  height: 48px;
+  color: var(--encre-douce);
+  margin-bottom: 12px;
+}
+
+.upload-dropzone span:first-of-type {
+  font-weight: 600;
+  color: var(--encre);
+}
+
+.upload-hint {
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+  margin-top: 4px;
+}
+
+.image-previews {
+  margin-top: 16px;
+}
+
+.image-count {
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+  margin-bottom: 12px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.image-preview-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid var(--ligne);
+}
+
+.image-preview-item.main {
+  border-color: var(--brique);
+}
+
+.image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.image-preview-item:hover .image-actions {
+  opacity: 1;
+}
+
+.image-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--encre);
+  transition: all 0.2s ease;
+}
+
+.image-action-btn:hover:not(:disabled) {
+  background: var(--brique);
+  color: white;
+}
+
+.image-action-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.image-action-btn.delete:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.image-action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.main-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--brique);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .upload-dropzone {
+    padding: 24px;
+  }
+
+  .image-actions {
+    opacity: 1;
+  }
+}
