@@ -6,6 +6,20 @@ KazeService est une application web destinée à présenter et gérer des servic
 
 La plateforme associe un frontend React à une API REST développée avec Laravel.
 
+## 📸 Aperçu de la plateforme
+
+### Page d'accueil
+![Page d'accueil KazeService](screenshots/accueil.png)
+
+### Offres immobilières
+![Liste des offres immobilières](screenshots/offres.png)
+
+### Détail d'une offre
+![Détail d'une offre immobilière](screenshots/detail_offres.png)
+
+### Tableau de bord
+![Tableau de bord KazeService](screenshots/tableau_de_bord.png)
+
 ## Fonctionnalités
 
 - **Gestion immobilière :** consultation, publication et gestion des biens immobiliers.
